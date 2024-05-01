@@ -1,0 +1,40 @@
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+    margin: 15px 0px;
+
+}
+
+.header-logo{
+
+}
+
+.header-menu-list{
+
+}
+
+.header-menu-wrapper{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap:10px;
+}
+
+.header-menu-wrapper  li{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding:0 10px;
+}
+
+.header-menu-right-list{
+
+}
+
+.header-menu-right-wrapper{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
