@@ -1,39 +1,35 @@
-.header-wrapper{
+.header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 0px;
     margin: 15px 0px;
+    width: 95%;
+    margin: 0 auto;
 
 }
 
-.header-logo{
+.header-logo {}
 
-}
+.header-menu-list {}
 
-.header-menu-list{
-
-}
-
-.header-menu-wrapper{
+.header-menu-wrapper {
     display: flex;
     list-style-type: none;
     align-items: center;
-    gap:10px;
+    gap: 10px;
 }
 
-.header-menu-wrapper  li{
+.header-menu-wrapper li {
     display: flex;
     align-items: center;
-    gap:10px;
-    padding:0 10px;
+    gap: 10px;
+    padding: 0 10px;
 }
 
-.header-menu-right-list{
+.header-menu-right-list {}
 
-}
-
-.header-menu-right-wrapper{
+.header-menu-right-wrapper {
     display: flex;
     list-style-type: none;
     align-items: center;

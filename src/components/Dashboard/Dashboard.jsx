@@ -1,6 +1,9 @@
 import {useState,useEffect} from 'react';
 import DashboardStyled from './dashBoard.module.css'
 import DashboardCards from '../dashboardCards/DashboardCards';
+import Message from '../Messages/Message';
+import TaskManagement from '../taskManagement/TaskManagement';
+import Project from '../projectRoadMap/ProjectRoadMap';
 
 
 const Dashboard = () =>{
@@ -25,13 +28,17 @@ const Dashboard = () =>{
                     </div>
                     <div className={DashboardStyled['dashboard-board-container']}>
                         <div className={DashboardStyled['dashboard-board-wrapper']}>
-                            
+                            <Project/>
                         </div>
                     </div>
                 </div>
-                <div className={DashboardStyled['']}>
-                    <div></div>
-                    <div></div>
+                <div className={DashboardStyled['dashboard-msg-task-container']}>
+                    <div>
+                    <Message/>
+                    </div>
+                    <div>
+                        <TaskManagement/>
+                    </div>
                 </div>
             </div>
         </>
