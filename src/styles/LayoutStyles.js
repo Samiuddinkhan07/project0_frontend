@@ -21,21 +21,32 @@ export default HomePageLayout
 export const SignUpContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 100vh;
-  background-image: linear-gradient(
-    43deg,
-    #4158d0 0%,
-    #c850c0 46%,
-    #ffcc70 100%
-  );
-
-  .form-wrapper {
+  .banner-section{
+    background-image: url('/src/assets/login-background-img.svg');
+      height: 100%;
+      width: 51%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    @media screen and (max-width:700px){
+      display: none;
+    }
+    .banner-wrapper{
+     
+    }
+  }
+  .form-container{
     width: 400px;
+    margin:0 auto;
+    .header-text{
+      text-align: center;
+        margin-top: -61px;
+        margin-bottom: 20px;
+    }
+    .form-wrapper {
     margin: 0 auto;
-    border: 1px solid #f1f1f1;
     padding: 15px 40px;
-    border-radius: 10px;
     background-color: #fff;
     label {
       display: block;
@@ -83,6 +94,7 @@ export const SignUpContainer = styled.div`
         color: white;
       }
     }
+  }
   }
 `;
 

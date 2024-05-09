@@ -15,7 +15,7 @@ h1,h2,h3,h4,h5,h6{
   height: 100vh;
 }
 
-#root::after{
+/* #root::after{
   content:"";
   background-image: url("../src/assets/bg-full.png");
   background-size:cover;
@@ -25,4 +25,4 @@ h1,h2,h3,h4,h5,h6{
   position: absolute;
   top: 0;
   z-index: 0;
-}
+} */

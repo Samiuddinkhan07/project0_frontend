@@ -40,7 +40,7 @@ const Dashboard = () =>{
                         <TaskManagement/>
                     </div>
                 </div>
-            </div>
+            </div> 
         </>
     )
 }
