@@ -6,5 +6,13 @@ export default defineConfig({
   plugins: [react()],
   "rules": {
     "react/prop-types": 0
+  },
+  server:{
+    proxy:{
+      '/api':{
+        target:"http://localhost:5000",
+        changeOrigin:true,
+      }
+    }
   }
 })

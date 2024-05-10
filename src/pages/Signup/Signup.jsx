@@ -4,9 +4,11 @@ import { SignUpContainer } from '../../styles/LayoutStyles';
 import axios from 'axios';
 
 
-const Login = () => {
+const SignUp = () => {
   const navigate = useNavigate();
   const [loginDet,setLoginDet] = React.useState({
+    name:"",
+    username:"",
     email:"",
     password:"",
   });
@@ -34,13 +36,17 @@ const Login = () => {
   }
 
   if (_err.length === 0) {
-    const data = await axios.post('/api/login',{
-      email:loginDet.email,
-      password:loginDet.password
+    console.log("before post")
+    const response = await axios.post('/api/signup',{
+        email:loginDet.email,
+        password:loginDet.password,
+        name:loginDet.name,
+        username:loginDet.username
     })
-    const result = await data.data;
+    const result = await response.data;
     console.log(result);
-     navigate("/dashboard");
+    if (!userToken) _err.push("Invalid Credentials");
+    else navigate("/dashboard");
   }
   }
 
@@ -56,7 +62,7 @@ const Login = () => {
       </div>
     <div className='form-container'>
       <form  className="form-wrapper" onSubmit={loginHandler}>
-        <h1>Login</h1>
+        <h1>Sign Up</h1>
         {(_err.length > 0) &&
             <ul className="err-msg">
               {loginDet._err.map((e,i) =>{
@@ -71,6 +77,20 @@ const Login = () => {
           id="email"
           onChange={(e) => setLoginDet({ ...loginDet, email: e.target.value })}
         />
+        <label htmlFor="email">Name</label>
+        <input
+          type="name"
+          name=""
+          id="name"
+          onChange={(e) => setLoginDet({ ...loginDet, name: e.target.value })}
+        />
+        <label htmlFor="email">Username</label>
+        <input
+          type="name"
+          name=""
+          id="name"
+          onChange={(e) => setLoginDet({ ...loginDet, username: e.target.value })}
+        />
         <label htmlFor="psw">Password</label>
         <input
           type="password"
@@ -80,7 +100,7 @@ const Login = () => {
         />
         <button>Submit</button>
         <p>
-          Dont have a account? <Link to="/signup">Sign Up</Link>
+         Already have a account? <Link to="/">Sign In</Link>
         </p>
       </form>
     </div>
@@ -88,4 +108,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default SignUp
