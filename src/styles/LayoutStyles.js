@@ -13,6 +13,7 @@ const HomePageLayout = styled.div`
     .page-body{
         width: 95%;
         margin: 0 auto;
+        flex: 1;
     }
     `;
 

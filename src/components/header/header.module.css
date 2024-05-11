@@ -33,4 +33,22 @@
     display: flex;
     list-style-type: none;
     align-items: center;
+    text-decoration: none;
 }
+.active-Header{
+   color:#EB7B26;
+   text-decoration:none;
+   display: flex;
+    align-items: center;
+  
+}
+
+
+
+.non-activeheader{
+    text-decoration:none;
+    color:#000;
+    display: flex;
+    align-items: center;
+}
+

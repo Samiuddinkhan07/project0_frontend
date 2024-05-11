@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import HeaderStyled from  './header.module.css'
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -8,29 +9,25 @@ const Header = () => {
             <h1>Tasker</h1>
         </div>
         <div className={HeaderStyled['header-menu-list']}>
-            <ul className={HeaderStyled['header-menu-wrapper']}>
-                <li>
+            <div className={HeaderStyled['header-menu-wrapper']}>
+                <NavLink to='/dashboard/' className={({isActive}) => isActive ? `${HeaderStyled['active-Header']}` : `${HeaderStyled['non-activeheader']} ` `${HeaderStyled['basic-styles']} `}>
                     <span>
                     <box-icon name='layer'></box-icon>
                     </span>
                     Overview
-                </li>
-                <li>
-
-                    Projects
-                </li>
-                <li>
+                </NavLink>
+                <NavLink to='/dashboard/teams' className={({isActive}) => isActive ? `${HeaderStyled['active-Header']}` : `${HeaderStyled['non-activeheader']} `}>
                     Teams
-                </li>
-                <li>
+                </NavLink>
+                <NavLink to='/dashboard/calender' className={({isActive}) => isActive ? `${HeaderStyled['active-Header']}` : `${HeaderStyled['non-activeheader']} `}>
                     <span><box-icon name='calendar'></box-icon></span>
                     Calender
-                </li>
-                <li>
+                </NavLink>
+                <NavLink to='/dashbboard/messages' className={({isActive}) => isActive ? `${HeaderStyled['active-Header']}` : `${HeaderStyled['non-activeheader']} `}>
                     <span><box-icon name='chat'></box-icon></span>
                     Messages
-                </li>
-            </ul>
+                </NavLink>
+            </div>
         </div>
         <div className={HeaderStyled['header-menu-right-list']}>
             <ul className={HeaderStyled['header-menu-right-wrapper']}>

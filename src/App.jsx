@@ -15,6 +15,7 @@ function App() {
         <Route path="/dashboard" element={<Homepage/>}>
           <Route path="/dashboard/" element={<Dashboard/>}/>
         </Route>
+        <Route path="*" element={<h1>Trying to access my life's plans? Sorry, they're still under development. Please check back in a few millennia.</h1>}/>
       </Routes>
      </Router>
     </>
