@@ -33,10 +33,10 @@ const Dashboard = () =>{
                     </div>
                 </div>
                 <div className={DashboardStyled['dashboard-msg-task-container']}>
-                    <div>
+                    <div className={DashboardStyled['dashboard-msg-container']}>
                     <Message/>
                     </div>
-                    <div>
+                    <div className={DashboardStyled['dashboard-Task-container']}>
                         <TaskManagement/>
                     </div>
                 </div>
