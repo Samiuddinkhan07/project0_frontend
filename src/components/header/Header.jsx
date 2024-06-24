@@ -10,7 +10,7 @@ const Header = () => {
         </div>
         <div className={HeaderStyled['header-menu-list']}>
             <div className={HeaderStyled['header-menu-wrapper']}>
-                <NavLink to='/dashboard/' className={({isActive}) => isActive ? `${HeaderStyled['active-Header']}` : `${HeaderStyled['non-activeheader']} ` `${HeaderStyled['basic-styles']} `}>
+                <NavLink to='/dashboard/' className={({isActive}) => isActive ? `${HeaderStyled['active-Header']}` : `${HeaderStyled['non-activeheader']} `}>
                     <span>
                     <box-icon name='layer'></box-icon>
                     </span>
